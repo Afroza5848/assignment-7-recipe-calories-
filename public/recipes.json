@@ -5,8 +5,8 @@
         "recipe_image": "https://i.ibb.co/HHTd28M/recipe1.jpg",
         "description": "A flavorful and aromatic Thai-inspired dish with tender chicken and fresh basil leaves.",
         "ingredients": ["550 g chicken", "120 ml soy sauce", "200 g basil leaves", "400 g mushrooms"],
-        "preparing_time": "30 minutes",
-        "calories": "350 kcal"
+        "preparing_time": 30 ,
+        "calories": 350 
     },
     {
         "recipe_id": 2,
@@ -14,8 +14,8 @@
         "recipe_image": "https://i.ibb.co/sqzCc0y/recipe2.jpg",
         "description": "Creamy and comforting risotto packed with savory mushrooms and Parmesan cheese.",
         "ingredients": ["300 g Arborio rice", "500 g mushrooms", "1 liter vegetable broth", "100 g Parmesan cheese"],
-        "preparing_time": "45 minutes",
-        "calories": "400 kcal"
+        "preparing_time": 45 ,
+        "calories": 400 
     },
     {
         "recipe_id": 3,
@@ -23,8 +23,8 @@
         "recipe_image": "https://i.ibb.co/2dbJ29m/recipe3.jpg",
         "description": "A simple yet delicious pizza topped with tomato sauce, fresh mozzarella, and basil leaves.",
         "ingredients": ["300 g pizza dough", "200 g tomato sauce", "200 g fresh mozzarella", "100 g fresh basil leaves"],
-        "preparing_time": "25 minutes",
-        "calories": "300 kcal"
+        "preparing_time": 25 ,
+        "calories": 300 
     },
     {
         "recipe_id": 4,
@@ -32,8 +32,8 @@
         "recipe_image": "https://i.ibb.co/C5dJpYn/recipe4.jpg",
         "description": "A colorful and healthy stir-fry featuring a variety of fresh vegetables tossed in a flavorful sauce.",
         "ingredients": ["300 g mixed vegetables (bell peppers, broccoli, carrots, snow peas)", "150 g tofu", "100 ml soy sauce", "50 g cashews"],
-        "preparing_time": "20 minutes",
-        "calories": "250 kcal"
+        "preparing_time": 20 ,
+        "calories": 250
     },
     {
         "recipe_id": 5,
@@ -41,8 +41,8 @@
         "recipe_image": "https://i.ibb.co/kmCbtv0/recipe5.jpg",
         "description": "Tangy and savory pasta dish featuring succulent shrimp, garlic, and fresh lemon zest.",
         "ingredients": ["400 g spaghetti", "300 g shrimp", "4 cloves garlic", "1 lemon (zest and juice)"],
-        "preparing_time": "35 minutes",
-        "calories": "380 kcal"
+        "preparing_time": 35,
+        "calories": 380
     },
     {
         "recipe_id": 6,
@@ -50,7 +50,7 @@
         "recipe_image": "https://i.ibb.co/Z84MH3g/recipe6.jpg",
         "description": "Classic homemade cookies loaded with chocolate chips for a sweet treat.",
         "ingredients": ["200 g all-purpose flour", "150 g unsalted butter", "150 g brown sugar", "1 egg", "150 g chocolate chips"],
-        "preparing_time": "15 minutes",
-        "calories": "200 kcal"
+        "preparing_time": 15 ,
+        "calories": 200 
     }
 ]

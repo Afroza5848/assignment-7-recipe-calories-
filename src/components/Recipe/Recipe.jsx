@@ -1,7 +1,9 @@
 
 import PropTypes from 'prop-types';
+import { CiClock2 } from "react-icons/ci";
+import { AiOutlineFire } from "react-icons/ai";
 
-const Recipe = ({recipe}) => {
+const Recipe = ({recipe,handleWantToCook}) => {
     const {recipe_image,recipe_name,description,preparing_time,calories,ingredients} = recipe;
     return (
         <section>
@@ -11,9 +13,28 @@ const Recipe = ({recipe}) => {
             </figure>
             <div className="card-body">
                 <h2 className="card-title">{recipe_name}</h2>
-                <p>{description}</p>
+                <p className='mb-2 text-[#282828B9]'>{description}</p>
+                <hr />
+                {/* ingredients */}
+                <div className=' mt-2 mb-2'>
+                    <h2 className=' text-xl text-[#282828B3] font-semibold'>Ingredients: {ingredients.length}</h2>
+                    {
+                        ingredients.map((ingredient,idx) => {
+                           return <li className=' text-[#2828284D] font-normal py-1' key={idx}>{ingredient}</li>
+                        })
+                    }
+                </div>
+                <hr />
+
+                {/* time */}
+                <div className='flex justify-between py-3 items-center'>
+                    <p className='flex gap-2 justify-center items-center text-[#282828B9]'><CiClock2 /> {preparing_time} minutes</p>
+                    <p className='flex gap-2 justify-center items-center text-[#282828B9]'><AiOutlineFire /> {calories} Calories</p>
+                </div>
+
+
                 <div className="card-actions">
-                <button className="btn bg-green-500 text-white rounded-full">Want To Cook</button>
+                <button onClick={()=>handleWantToCook(recipe)} className="btn bg-green-500 text-white rounded-full">Want To Cook</button>
                 </div>
             </div>
             </div>
@@ -22,7 +43,8 @@ const Recipe = ({recipe}) => {
 };
 
 Recipe.propTypes = {
-    recipe:PropTypes.object 
+    recipe:PropTypes.object,
+    handleWantToCook:PropTypes.func 
 };
 
 export default Recipe;
