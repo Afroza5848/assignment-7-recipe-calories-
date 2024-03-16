@@ -8,15 +8,18 @@ import Recipe from "../Recipe/Recipe";
 
 const Recipes = () => {
     const [recipes, setRecipes] = useState([]);
-    const [cart,setCart] = useState([])
+    const [cart,setCart] = useState([]);
+    const [currentCart, setCurrentCart] = useState([]);
+    const [totalTime,setTotalTime] = useState(0);
+    const [totalCalories,setTotalCalories] = useState(0);
 
     useEffect(()=>{
         fetch('recipes.json')
         .then(res => res.json())
         .then(data => setRecipes(data))
     },[])
-   console.log(cart)
-
+   //console.log(cart)
+// handle want to cook button
    const handleWantToCook = (recipe) => {
        const isExists =  cart.find(c => c.recipe_id === recipe.recipe_id);
        if(!isExists){
@@ -25,12 +28,18 @@ const Recipes = () => {
        }
        else{
         toast.error("Already Exists")
-       }
-
-
-        
+       }  
    }
+// handle preparing button
+   const handlePreparingBtn = (cart2) => {
+       
+        const removeCart = cart.filter(item => item.recipe_id !== cart2.recipe_id);
+        setCart(removeCart);
+        setCurrentCart([...currentCart,cart2]);
+        setTotalTime(totalTime + cart2.preparing_time);
+        setTotalCalories(totalCalories + cart2.calories);
 
+   }
     return (
         <section className=" container mx-auto px-2 py-11">
             <div className="text-center w-2/3 mx-auto py-14">
@@ -48,7 +57,7 @@ const Recipes = () => {
                     </div>
                 </div>
                 <div className=" col-span-2">
-                    <Carts cart={cart}></Carts>
+                    <Carts totalTime={totalTime} totalCalories={totalCalories} handlePreparingBtn={handlePreparingBtn} currentCart={currentCart} cart={cart}></Carts>
                 </div>
             </div>
             <ToastContainer />        
