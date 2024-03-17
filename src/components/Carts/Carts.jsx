@@ -32,7 +32,7 @@ const Carts = ({cart,handlePreparingBtn,currentCart,totalTime,totalCalories}) =>
                                             <td>{c.preparing_time} minutes</td>
                                             <td>{c.calories} Calories</td>
                                            <div className=''>
-                                           <button onClick={()=>handlePreparingBtn(c)} className="px-4 py-2 bg-green-500 rounded-full text-white">preparing</button>
+                                           <button onClick={()=>handlePreparingBtn(c)} className="px-4 py-2 bg-green-500 rounded-full lg:mt-2 lg:mb-2 mt-6 text-white">preparing</button>
                                            </div>
                                             
                                     
