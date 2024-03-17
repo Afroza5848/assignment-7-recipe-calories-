@@ -11,7 +11,7 @@ const Carts = ({cart,handlePreparingBtn,currentCart,totalTime,totalCalories}) =>
                 <hr  className=" w-2/4 mx-auto"/>
 
                 <div className="overflow-x-auto mt-4">
-                    <table className="table">
+                    <table className="table b">
                     
                         <thead>
                         <tr className="text-xl">

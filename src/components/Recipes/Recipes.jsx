@@ -43,9 +43,9 @@ const Recipes = () => {
    }
     return (
         <section className=" container mx-auto px-2 py-11">
-            <div className="text-center w-2/3 mx-auto py-14">
-                <h2 className=" text-5xl font-semibold text-[#150B2B] mb-5">Our Recipes</h2>
-                <p className="text-xl text-[#150B2B99]">Welcome to our treasure trove of recipes, carefully curated to tantalize your taste buds and inspire your culinary adventures.  Get ready to embark on a delicious journey with us!</p>
+            <div className="text-center lg:w-2/3 mx-auto py-14">
+                <h2 className=" lg:text-5xl text-3xl font-semibold text-[#150B2B] mb-5">Our Recipes</h2>
+                <p className="lg:text-xl text-[#150B2B99]">Welcome to our treasure trove of recipes, carefully curated to tantalize your taste buds and inspire your culinary adventures.  Get ready to embark on a delicious journey with us!</p>
             </div>
             <div className="grid lg:grid-cols-4 grid-cols-1 gap-8">
                 <div className=" col-span-2">
