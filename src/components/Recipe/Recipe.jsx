@@ -7,8 +7,8 @@ const Recipe = ({recipe,handleWantToCook}) => {
     const {recipe_image,recipe_name,description,preparing_time,calories,ingredients} = recipe;
     return (
         <section>
-            <div className="card bg-base-100 border border-gray-300 ">
-            <figure className="px-6 pt-6">
+            <div className="card bg-base-100 border h-full border-gray-300">
+            <figure className="px-4 pt-4">
                 <img src={recipe_image} alt={recipe_image} className="rounded-xl" />
             </figure>
             <div className="card-body">

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const Carts = ({cart,handlePreparingBtn,currentCart,totalTime,totalCalories}) => {
    console.log(currentCart);
     return (
-        <div className=" border border-gray-300 rounded-2xl p-6">
+        <div className=" border border-gray-300 rounded-2xl  p-4">
             <div>
                 <h2 className="text-2xl font-bold text-center mb-4">Want to cook: {cart.length}</h2>
                 <hr  className=" w-2/4 mx-auto"/>
@@ -14,7 +14,7 @@ const Carts = ({cart,handlePreparingBtn,currentCart,totalTime,totalCalories}) =>
                     <table className="table">
                     
                         <thead>
-                        <tr className="text-center text-xl">
+                        <tr className="text-xl">
                             <th></th>
                             <th>Name</th>
                             <th>Time</th>
@@ -26,12 +26,14 @@ const Carts = ({cart,handlePreparingBtn,currentCart,totalTime,totalCalories}) =>
                             {
                                 cart.map((c,idx) => (
                                    
-                                        <tr key={idx} className="bg-base-200 text-center">
+                                        <tr key={idx} className="bg-base-200 ">
                                             <th>{idx + 1}</th>
                                             <td>{c.recipe_name}</td>
                                             <td>{c.preparing_time} minutes</td>
                                             <td>{c.calories} Calories</td>
-                                            <button onClick={()=>handlePreparingBtn(c)} className="px-4 py-2 my-1 bg-green-500 rounded-full text-white">preparing</button>
+                                           
+                                            <button onClick={()=>handlePreparingBtn(c)} className="px-4 py-2 my-auto bg-green-500 rounded-full text-white">preparing</button>
+                                            
                                     
                                         </tr>
                                 ))
@@ -52,7 +54,7 @@ const Carts = ({cart,handlePreparingBtn,currentCart,totalTime,totalCalories}) =>
                     <table className="table">
                     
                         <thead>
-                        <tr className=" text-center text-xl">
+                        <tr className="text-xl">
                             <th></th>
                             <th>Name</th>
                             <th>Time</th>
@@ -64,7 +66,7 @@ const Carts = ({cart,handlePreparingBtn,currentCart,totalTime,totalCalories}) =>
                        {
                         currentCart.map((c,idx) => {
                             return(
-                            <tr key={idx} className="bg-base-200 text-center">
+                            <tr key={idx} className="bg-base-200 ">
                                 <th>{idx + 1}</th>
                                 <td>{c.recipe_name}</td>
                                 <td>{c.preparing_time} minutes</td>
@@ -75,11 +77,11 @@ const Carts = ({cart,handlePreparingBtn,currentCart,totalTime,totalCalories}) =>
                         })
                        }
 
-                       <tr className='text-center'>
+                       <tr>
                             <td></td>
                             <td></td>
-                            <td>Total Times = {totalTime} minutes</td>
-                            <td>Total Calories = {totalCalories} Calories</td>
+                            <td><h2 className=' font-bold'>Total Times =</h2>{totalTime} minutes</td>
+                            <td><h2 className=' font-bold'>Total Calories =</h2> {totalCalories} Calories</td>
                        </tr>
                         
                         </tbody>

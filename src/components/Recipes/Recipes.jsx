@@ -25,6 +25,7 @@ const Recipes = () => {
        if(!isExists){
             const newRecipe = [...cart,recipe]
             setCart(newRecipe)
+            toast.success("Successfully Added")
        }
        else{
         toast.error("Already Exists")
