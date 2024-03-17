@@ -26,13 +26,14 @@ const Carts = ({cart,handlePreparingBtn,currentCart,totalTime,totalCalories}) =>
                             {
                                 cart.map((c,idx) => (
                                    
-                                        <tr key={idx} className="bg-base-200 ">
+                                        <tr key={idx} className="bg-base-200">
                                             <th>{idx + 1}</th>
                                             <td>{c.recipe_name}</td>
                                             <td>{c.preparing_time} minutes</td>
                                             <td>{c.calories} Calories</td>
-                                           
-                                            <button onClick={()=>handlePreparingBtn(c)} className="px-4 py-2 my-auto bg-green-500 rounded-full text-white">preparing</button>
+                                           <div className=''>
+                                           <button onClick={()=>handlePreparingBtn(c)} className="px-4 py-2 bg-green-500 rounded-full text-white">preparing</button>
+                                           </div>
                                             
                                     
                                         </tr>
